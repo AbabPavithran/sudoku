@@ -1,9 +1,4 @@
-/* ==========================================================================
-   Sudoku Pro - Design System & Modern Styles
-   ========================================================================== */
-
 :root {
-  /* Dark Emerald Teal Theme (Matching Reference UI Image) */
   --bg-primary: #0b1f1c;
   --bg-secondary: #122c28;
   --bg-card: rgba(18, 44, 40, 0.8);

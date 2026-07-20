@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudoku - Modern Interactive Puzzle Game</title>
-  <meta name="description" content="Play beautiful, interactive Sudoku puzzles with multiple difficulty levels, pencil notes, auto-validation, smart hints, and dark mode.">
+  <title>Sudoku</title>
+  <meta name="description" content="Sudoku puzzle game.">
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body class="dark-theme">
   <div class="app-container">
-    <!-- Header -->
     <header class="game-header">
       <div class="brand">
         <h1>Sudoku</h1>
@@ -52,9 +50,7 @@
       </div>
     </header>
 
-    <!-- Main Game Area -->
     <main class="game-layout">
-      <!-- Top Control Bar -->
       <section class="game-bar">
         <div class="difficulty-picker">
           <label for="difficulty-select" class="sr-only">Difficulty</label>
@@ -97,14 +93,9 @@
         </button>
       </section>
 
-      <!-- Sudoku Board & Tools Wrapper -->
       <div class="board-container">
-        <!-- Sudoku Board Grid -->
-        <div id="sudoku-board" class="sudoku-board" tabIndex="0" aria-label="Sudoku Grid">
-          <!-- 81 cells will be rendered dynamically -->
-        </div>
+        <div id="sudoku-board" class="sudoku-board" tabIndex="0" aria-label="Sudoku Grid"></div>
 
-        <!-- Start Overlay -->
         <div id="start-overlay" class="overlay">
           <div class="overlay-card">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🧩</div>
@@ -114,17 +105,15 @@
           </div>
         </div>
 
-        <!-- Pause Overlay -->
         <div id="pause-overlay" class="overlay hidden">
           <div class="overlay-card">
             <h2>Game Paused</h2>
-            <p>Take a breath! Click below to resume your puzzle.</p>
+            <p>Click below to resume your puzzle.</p>
             <button id="resume-btn" class="primary-btn">Resume Game</button>
           </div>
         </div>
       </div>
 
-      <!-- Action Tools & Numpad -->
       <section class="controls-section">
         <div class="action-tools">
           <button id="undo-btn" class="tool-btn" title="Undo (Ctrl+Z)">
@@ -171,7 +160,6 @@
           </button>
         </div>
 
-        <!-- Numeric Keypad -->
         <div id="numpad" class="numpad">
           <button class="num-btn" data-value="1">1</button>
           <button class="num-btn" data-value="2">2</button>
@@ -186,12 +174,11 @@
       </section>
     </main>
 
-    <!-- Win Modal -->
     <div id="win-modal" class="modal-backdrop hidden">
       <div class="modal-card">
         <div class="trophy-icon">🏆</div>
         <h2>Puzzle Solved!</h2>
-        <p class="win-subtitle">Outstanding focus and logic!</p>
+        <p class="win-subtitle">Great job!</p>
 
         <div class="win-stats">
           <div class="win-stat-box">
@@ -199,7 +186,7 @@
             <span id="win-difficulty" class="val">Medium</span>
           </div>
           <div class="win-stat-box">
-            <span class="label">Time Taken</span>
+            <span class="label">Time</span>
             <span id="win-time" class="val">04:12</span>
           </div>
           <div class="win-stat-box">
@@ -212,7 +199,6 @@
       </div>
     </div>
 
-    <!-- Game Over Modal -->
     <div id="game-over-modal" class="modal-backdrop hidden">
       <div class="modal-card">
         <div class="trophy-icon" style="filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.4));">❌</div>
@@ -234,7 +220,6 @@
       </div>
     </div>
 
-    <!-- Footer Shortcuts -->
     <footer class="shortcuts-bar">
       <span><kbd>1-9</kbd> Input</span>
       <span><kbd>N</kbd> Pencil</span>
@@ -245,6 +230,6 @@
     </footer>
   </div>
 
-  <script src="app.js?v=9"></script>
+  <script src="app.js?v=10"></script>
 </body>
 </html>
